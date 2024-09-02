@@ -1,0 +1,8 @@
+Summary Stack:
+Frontend: React, Three.js, Vite, Tailwind CSS, React Router
+Backend: FastAPI, SQLAlchemy, Celery, Uvicorn
+Database: PostgreSQL, Alembic
+DevOps: Docker, Docker Compose, Nginx, GitHub Actions
+Hosting: AWS/GCP
+Authentication: Auth0 or Firebase
+Monitoring: Sentry, Prometheus, Grafana
