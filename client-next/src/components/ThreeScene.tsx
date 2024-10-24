@@ -7,19 +7,6 @@ const ThreeScene = () => {
   const mountRef = useRef<HTMLDivElement | null>(null);
   const [isClient, setIsClient] = useState(false); // State to track when it's client-side
 
-  // Highlight-related state
-  const highlightNodes = new Set();
-  const highlightLinks = new Set();
-  let hoverNode: any = null;
-
-  // Function to update the highlight effect
-  const updateHighlight = (Graph: any) => {
-    Graph
-      .nodeColor(Graph.nodeColor())  // Trigger re-render
-      .linkWidth(Graph.linkWidth())
-      .linkDirectionalParticles(Graph.linkDirectionalParticles());
-  };
-
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -27,6 +14,19 @@ const ThreeScene = () => {
   useEffect(() => {
     if (isClient && mountRef.current) {
       const elem = mountRef.current;
+
+      // Highlight-related state
+      const highlightNodes = new Set();
+      const highlightLinks = new Set();
+      let hoverNode: any = null;
+
+      // Function to update the highlight effect
+      const updateHighlight = (Graph: any) => {
+        Graph
+          .nodeColor(Graph.nodeColor())  // Trigger re-render
+          .linkWidth(Graph.linkWidth())
+          .linkDirectionalParticles(Graph.linkDirectionalParticles());
+      };
 
       // Fetch the graph data manually
       fetch('/datasets/generated_tree_graph.json')
@@ -52,7 +52,7 @@ const ThreeScene = () => {
 
           const Graph = ForceGraph3D({ controlType: 'trackball' })(elem)
             .graphData(gData)
-            .nodeLabel('id')
+            .nodeLabel('name')
             .nodeAutoColorBy('group')
             .nodeColor((node: any) => highlightNodes.has(node) ? (node === hoverNode ? 'rgb(255,0,0,1)' : 'rgba(255,160,0,0.8)') : 'rgba(0,255,255,0.6)')
             .linkWidth((link: any) => highlightLinks.has(link) ? 4 : 1)

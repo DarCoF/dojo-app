@@ -1,20 +1,67 @@
 {
   "nodes": [
       {
-        "id": "id1",
-        "name": "name1",
+        "id": "1",
+        "name": "attack",
         "val": 1
       },
       {
-        "id": "id2",
-        "name": "name2",
+        "id": "2",
+        "name": "long-space",
         "val": 10
-      }
+      },
+      {
+        "id": "3",
+        "name": "medium-space",
+        "val": 10
+      },
+      {
+        "id": "4",
+        "name": "closed-space",
+        "val": 10
+      },
+      {
+        "id": "5",
+        "name": "bottom-open-guards",
+        "val": 10
+      },
+
+      {
+        "id": "6",
+        "name": "standing-open-guards",
+        "val": 10
+      },
+      {
+        "id": "7",
+        "name": "closing-distance-standing",
+        "val": 10
+      },
+      {
+        "id": "8",
+        "name": "closing-distance-bottom",
+        "val": 10
+      },
+      {
+        "id": "9",
+        "name": "bottom-guards",
+        "val": 10
+      },
+      {
+        "id": "10",
+        "name": "standing-guards",
+        "val": 10
+      },
+
+
+
+
+
+
   ],
   "links": [
       {
-          "source": "id1",
-          "target": "id2"
+          "source": "1",
+          "target": "2"
       }
   ]
 }
