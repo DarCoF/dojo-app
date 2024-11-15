@@ -1,16 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 :root {
-  --background: #ffffff;
+  --background: #1b1b1b;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #111111;
   }
 }
 
@@ -24,4 +24,9 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.main-background {
+  background-color: #070707;
+  background-image: linear-gradient(315deg, #000000 0%, #0f0f0f 74%);
 }
