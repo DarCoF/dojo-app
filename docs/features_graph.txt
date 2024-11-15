@@ -1,17 +1,23 @@
 0/ The graph itself
-1/ Bounded zoom-in/out
+
+## Current batch of updates
+1/ Bounded zoom-in/out (DONE)
 2/ Visual-driven layout
 3/ Clickable nodes
 4/ Expandible sidebar
-5/ Search bar
-6/ Highlighted nodes with search results
-7/ Keyboard shortcuts
-8/ Center-to-window
-9/ Responsive window
-10/ Zoom-in to node
-11/ Miniature object for node shape
-12/ Dynamic edge flow in highlighted nodes
-13/ Highlighted lineage on node hover
-14/ Toggle on/off features
-15/ Summary window on node hover
-16/ Brief navigation tutorial
+5/ Center-to-window (DONE)
+6/ Responsive window (DONE)
+7/ Zoom-in to node (DONE)
+8/ Miniature object for node shape
+9/ Highlighted lineage on node hover
+10/ Summary window on node hover
+11/ Navbar
+12/ Reset position keyboard shortcut
+
+## Next batch of updates
+12/ Search bar
+13/ Highlighted nodes with search results
+14/ Dynamic edge flow in highlighted nodes
+15/ Keyboard shortcuts
+16/ Toggle on/off features
+17/ Brief navigation tutorial

@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useRef, useEffect, useState } from 'react';
-import ForceGraph3D from '3d-force-graph';
+import ForceGraph3D from '.';
+
 
 const ThreeScene = () => {
   const mountRef = useRef<HTMLDivElement | null>(null);
@@ -119,7 +120,7 @@ const ThreeScene = () => {
     };
   }, [isClient]);
 
-  return <div ref={mountRef} style={{ width: '100%', height: '100%' }} />;
+  return <div ref={mountRef} style={{ width: '100vw', height: '100vh' }}/>;
 };
 
 export default ThreeScene;
