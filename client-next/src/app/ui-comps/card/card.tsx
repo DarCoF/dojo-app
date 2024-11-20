@@ -11,7 +11,7 @@ interface CardProps {
 
 export default function Card({ imageUrl, altText, title, description, tags, buttonTag }: CardProps) {
   return (
-    <div className="card glow max-w-sm rounded-lg overflow-hidden bg-custom-color border-solid border-2 border-gray-800 border-opacity-75 flex flex-col">
+    <div className="animated-card-border max-w-sm rounded-lg overflow-hidden bg-custom-color border-solid border-2 border-gray-800 border-opacity-75 flex flex-col">
       <img className="w-full" src={imageUrl} alt={altText} />
       <div className="px-6 py-4 flex-grow">
         <div className="font-bold text-xl mb-2 text-left">{title}</div>
