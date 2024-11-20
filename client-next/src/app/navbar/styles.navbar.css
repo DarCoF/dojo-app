@@ -1,0 +1,8 @@
+.bg-navbar-color {
+    background-color: #202020;
+    background-image: linear-gradient(315deg, #ffffff 50%, #080808 50%);
+}
+
+.the-red {
+    color: rgb(201, 39, 60);
+}
