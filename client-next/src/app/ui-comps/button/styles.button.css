@@ -1,0 +1,36 @@
+.animated-border {
+    position: relative;
+    display: inline-block; /* Ensure proper sizing for buttons */
+    overflow: hidden; /* Prevent the pseudo-element from overflowing */
+    border-radius: 1rem; /* Matches the button's border radius */
+    padding: 0.5rem 1rem; /* Adjust padding for your button size */
+    z-index: 1; /* Ensure the button's content stays above the border */
+  }
+  
+  .animated-border::before {
+    content: "";
+    position: absolute;
+    top: -2px; /* Ensure the border stays outside the button */
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: inherit;
+    background: conic-gradient(from 0deg, rgb(128, 0, 11), blue, purple);
+    z-index: -1; /* Place the spinning border behind the button content */
+    animation: none; /* Default state: no animation */
+    transition: transform 0.3s ease; /* Smooth animation on hover */
+  }
+  
+  .animated-border:hover::before {
+    animation: spin-border 1s linear infinite; /* Spin on hover */
+  }
+  
+  @keyframes spin-border {
+    from {
+      transform: rotate(0deg) scale(10);
+    }
+    to {
+      transform: rotate(360deg) scale(10);
+    }
+  }
+  
