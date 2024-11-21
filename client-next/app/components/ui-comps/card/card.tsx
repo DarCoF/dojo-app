@@ -5,8 +5,8 @@ interface CardProps {
   altText: string;
   title: string;
   description: string;
-  tags: string[];
-  buttonTag: string;
+  tags?: string[];
+  buttonTag?: string;
 }
 
 export default function Card({ imageUrl, altText, title, description, tags, buttonTag }: CardProps) {
@@ -18,7 +18,7 @@ export default function Card({ imageUrl, altText, title, description, tags, butt
         <p className="text-gray-400 text-base text-left">{description}</p>
       </div>
       <div className="px-6 pt-4 pb-2 flex-grow-0">
-        {tags.map((tag) => (
+        {tags?.map((tag) => (
           <span
             key={tag}
             className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
@@ -27,7 +27,7 @@ export default function Card({ imageUrl, altText, title, description, tags, butt
           </span>
         ))}
       </div>
-      <button className="bg-black border-solid border-2 border-gray-800  border-opacity-75 text-white font-semibold py-2 px-4 rounded-lg hover:bg-gray-600 transition mt-auto mb-4 mx-6">
+      <button className="bg-black border-solid border-2 border-gray-800  border-opacity-75 text-white font-semibold py-2 px-4 rounded-lg bg-gradient-to-r from-gray-800 to-gray-900 hover:from-purple-600 hover:to-red-900 transition mt-auto mb-4 mx-6">
         {buttonTag}
       </button>
     </div>
