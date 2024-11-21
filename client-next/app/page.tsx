@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Card from './ui-comps/card/card';
+import Card from './components/ui-comps/card/card';
 // Import styles
 import './styles/globals.css';
 
