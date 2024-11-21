@@ -1,3 +1,5 @@
+import { mix } from "three/webgpu";
+
 // tailwind.config.js or tailwind.config.ts
 module.exports = {
   content: [
@@ -10,6 +12,9 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      mixBlendMode: {
+        difference: "difference",
       },
     },
   },
