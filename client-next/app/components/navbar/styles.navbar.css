@@ -4,5 +4,71 @@
 }
 
 .the-red {
-    color: rgb(201, 39, 60);
+    position: relative;
+    color: rgb(243, 243, 243); /* Initial text color */
+    transition: color 0.3s ease-in-out;
 }
+
+.the-red:hover {
+    color: rgb(170, 37, 88); /* Text changes to red */
+}
+
+.navbar-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1rem; /* Hover trigger area height */
+    background-color: #070707; /* Make the trigger area invisible */
+    background-image: linear-gradient(315deg, #000000 0%, #0f0f0f 74%);
+    z-index: 1000;
+  }
+
+  .navbar-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 25%;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, rgba(220, 44, 255, 0.8), rgba(44, 118, 255, 0.8));
+    transform: translateX(-100%);
+    transition: transform 0.75s ease-in-out;
+  }
+  
+  .navbar-container:hover::after {
+    transform: translateX(0);
+    animation: light-beam 2s linear infinite;
+  }
+  
+  @keyframes light-beam {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  .navbar-content {
+    display: none; /* Navbar hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem; /* Navbar height */
+    z-index: 1001; /* Ensure it appears above the trigger */
+}
+
+  .navbar-container:hover .navbar-content {
+      display: block; /* Show navbar on hover */
+  } 
+
+  .fa-user-ninja {
+    transition: color 0.1s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .fa-user-ninja:hover {
+    transform: scale(1.1);
+    color: rgb(170, 37, 88);
+  }
