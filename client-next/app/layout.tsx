@@ -1,4 +1,5 @@
 import Navbar from './components/navbar/navbar';
+import Footer from './components/footer/footer';
 import './styles/globals.css'
 
 export const metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className="bg-gray-100">
         <Navbar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
